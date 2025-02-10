@@ -64,6 +64,7 @@ pub async fn authenticate(
     let mut tried: HashSet<MethodKindAdapter> = HashSet::new();
 
     let mut config_auth = Vec::with_capacity(3);
+    config_auth.push(Box::new(NoneAuth) as Box<dyn Auth>);
     if let Some(password) = opts.password.clone() {
         config_auth.push(Box::new(PasswordAuth { password }) as Box<dyn Auth>);
     }
