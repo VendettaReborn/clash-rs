@@ -1,3 +1,4 @@
+pub mod netns;
 pub mod noop;
 
 #[cfg(docker_test)]

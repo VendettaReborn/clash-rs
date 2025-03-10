@@ -441,7 +441,10 @@ fn get_device_broadcast(device: &tun::AsyncDevice) -> Option<std::net::Ipv4Addr>
                 Some(broadcast)
             }
             None => {
-                error!("invalid tun address {}, netmask {}", address, netmask);
+                error!(
+                    "broadcast, invalid tun address {}, netmask {}",
+                    address, netmask
+                );
                 None
             }
         },

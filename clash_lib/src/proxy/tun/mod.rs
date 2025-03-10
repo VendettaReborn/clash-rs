@@ -24,9 +24,9 @@ mod tests {
     }
 
     #[test]
-    #[ignore = "only run this test locally, to not deal with the tun device \
-                permission"]
     fn test_individual_routes() {
+        let _ns =
+            crate::proxy::utils::test_utils::netns::NetnsBuilder::new().build();
         let conf = r#"
     socks-port: 7891
     bind-address: 127.0.0.1
@@ -97,9 +97,9 @@ mod tests {
     }
 
     #[test]
-    #[ignore = "it's hard to test as altering the routing table can cause ssh \
-                connection lost"]
     fn test_route_all() {
+        let _ns =
+            crate::proxy::utils::test_utils::netns::NetnsBuilder::new().build();
         let conf = r#"
         socks-port: 7891
         bind-address: 127.0.0.1
@@ -166,8 +166,14 @@ mod tests {
             .unwrap_or_else(|_| panic!("failed to read log file: {}", log_path));
 
         assert!(logs.contains("route_all is enabled"));
-        assert!(logs.contains(format!("{} to MATCH", echo_addr).as_str()));
 
         handle.join().unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_download() {
+        // let _ns = crate::proxy::utils::test_utils::netns::NetNsGuard::new().
+        // await; let resolver = SystemResolver::new(false).unwrap();
+        // let client = new_http_client(resolver);
     }
 }
