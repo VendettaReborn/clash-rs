@@ -12,6 +12,7 @@ A custom protocol, rule based network proxy software.
 
 [![CI](https://github.com/Watfaq/clash-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/Watfaq/clash-rs/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/Watfaq/clash-rs/graph/badge.svg?token=ZQK5WB63KR)](https://codecov.io/gh/Watfaq/clash-rs)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FVendettaReborn%2Fclash-rs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FVendettaReborn%2Fclash-rs?ref=badge_shield)
 
 </div>
 
@@ -116,3 +117,7 @@ This command will generate a `clashrs.xcframework` file in the `build` directory
 ## ❤️ Inspired By
 - [Dreamacro/clash](https://github.com/Dreamacro/clash)
 - [eycorsican/leaf](https://github.com/eycorsican/leaf)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FVendettaReborn%2Fclash-rs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FVendettaReborn%2Fclash-rs?ref=badge_large)
